@@ -100,110 +100,130 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 23,
-                'title' => 'product_access',
-            ],
-            [
-                'id'    => 24,
                 'title' => 'product_unit_create',
             ],
             [
-                'id'    => 25,
+                'id'    => 24,
                 'title' => 'product_unit_edit',
             ],
             [
-                'id'    => 26,
+                'id'    => 25,
                 'title' => 'product_unit_show',
             ],
             [
-                'id'    => 27,
+                'id'    => 26,
                 'title' => 'product_unit_delete',
             ],
             [
-                'id'    => 28,
+                'id'    => 27,
                 'title' => 'product_unit_access',
             ],
             [
-                'id'    => 29,
+                'id'    => 28,
                 'title' => 'product_brand_create',
             ],
             [
-                'id'    => 30,
+                'id'    => 29,
                 'title' => 'product_brand_edit',
             ],
             [
-                'id'    => 31,
+                'id'    => 30,
                 'title' => 'product_brand_show',
             ],
             [
-                'id'    => 32,
+                'id'    => 31,
                 'title' => 'product_brand_delete',
             ],
             [
-                'id'    => 33,
+                'id'    => 32,
                 'title' => 'product_brand_access',
             ],
             [
-                'id'    => 34,
+                'id'    => 33,
                 'title' => 'product_category_create',
             ],
             [
-                'id'    => 35,
+                'id'    => 34,
                 'title' => 'product_category_edit',
             ],
             [
-                'id'    => 36,
+                'id'    => 35,
                 'title' => 'product_category_show',
             ],
             [
-                'id'    => 37,
+                'id'    => 36,
                 'title' => 'product_category_delete',
             ],
             [
-                'id'    => 38,
+                'id'    => 37,
                 'title' => 'product_category_access',
             ],
             [
-                'id'    => 39,
+                'id'    => 38,
                 'title' => 'product_attribute_create',
             ],
             [
-                'id'    => 40,
+                'id'    => 39,
                 'title' => 'product_attribute_edit',
             ],
             [
-                'id'    => 41,
+                'id'    => 40,
                 'title' => 'product_attribute_show',
             ],
             [
-                'id'    => 42,
+                'id'    => 41,
                 'title' => 'product_attribute_delete',
             ],
             [
-                'id'    => 43,
+                'id'    => 42,
                 'title' => 'product_attribute_access',
             ],
             [
-                'id'    => 44,
+                'id'    => 43,
                 'title' => 'product_variation_create',
             ],
             [
-                'id'    => 45,
+                'id'    => 44,
                 'title' => 'product_variation_edit',
             ],
             [
-                'id'    => 46,
+                'id'    => 45,
                 'title' => 'product_variation_show',
             ],
             [
-                'id'    => 47,
+                'id'    => 46,
                 'title' => 'product_variation_delete',
             ],
             [
-                'id'    => 48,
+                'id'    => 47,
                 'title' => 'product_variation_access',
             ],
             [
+                'id'    => 48,
+                'title' => 'product_create',
+            ],
+            [
                 'id'    => 49,
+                'title' => 'product_edit',
+            ],
+            [
+                'id'    => 50,
+                'title' => 'product_show',
+            ],
+            [
+                'id'    => 51,
+                'title' => 'product_delete',
+            ],
+            [
+                'id'    => 52,
+                'title' => 'product_access',
+            ],
+            [
+                'id'    => 53,
+                'title' => 'product_management_access',
+            ],
+            [
+                'id'    => 54,
                 'title' => 'profile_password_edit',
             ],
         ];

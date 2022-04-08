@@ -15,4 +15,7 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
 
     // Product Variation
     Route::apiResource('product-variations', 'ProductVariationApiController');
+
+    // Product
+    Route::apiResource('products', 'ProductApiController');
 });
