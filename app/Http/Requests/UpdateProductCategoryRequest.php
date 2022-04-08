@@ -23,7 +23,8 @@ class UpdateProductCategoryRequest extends FormRequest
             ],
             'slug' => [
                 'string',
-                'nullable',
+                'required',
+                'unique:product_categories,slug,' . request()->route('product_category')->id,
             ],
         ];
     }

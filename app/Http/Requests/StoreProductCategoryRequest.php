@@ -23,7 +23,8 @@ class StoreProductCategoryRequest extends FormRequest
             ],
             'slug' => [
                 'string',
-                'nullable',
+                'required',
+                'unique:product_categories',
             ],
         ];
     }
