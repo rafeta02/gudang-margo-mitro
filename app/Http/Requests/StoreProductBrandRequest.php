@@ -24,6 +24,7 @@ class StoreProductBrandRequest extends FormRequest
             'slug' => [
                 'string',
                 'required',
+                'unique:product_brands',
             ],
         ];
     }
