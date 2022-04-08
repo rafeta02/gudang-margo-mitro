@@ -51,6 +51,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('product-variations/process-csv-import', 'ProductVariationController@processCsvImport')->name('product-variations.processCsvImport');
     Route::resource('product-variations', 'ProductVariationController');
 
+    // Product
+    Route::delete('products/destroy', 'ProductController@massDestroy')->name('products.massDestroy');
+    Route::post('products/parse-csv-import', 'ProductController@parseCsvImport')->name('products.parseCsvImport');
+    Route::post('products/process-csv-import', 'ProductController@processCsvImport')->name('products.processCsvImport');
+    Route::resource('products', 'ProductController');
+
     Route::get('system-calendar', 'SystemCalendarController@index')->name('systemCalendar');
 });
 Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
@@ -100,6 +106,10 @@ Route::group(['as' => 'frontend.', 'namespace' => 'Frontend', 'middleware' => ['
     // Product Variation
     Route::delete('product-variations/destroy', 'ProductVariationController@massDestroy')->name('product-variations.massDestroy');
     Route::resource('product-variations', 'ProductVariationController');
+
+    // Product
+    Route::delete('products/destroy', 'ProductController@massDestroy')->name('products.massDestroy');
+    Route::resource('products', 'ProductController');
 
     Route::get('frontend/profile', 'ProfileController@index')->name('profile.index');
     Route::post('frontend/profile', 'ProfileController@update')->name('profile.update');
