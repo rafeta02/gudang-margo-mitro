@@ -27,9 +27,6 @@
                             <thead>
                                 <tr>
                                     <th>
-                                        {{ trans('cruds.product.fields.id') }}
-                                    </th>
-                                    <th>
                                         {{ trans('cruds.product.fields.name') }}
                                     </th>
                                     <th>
@@ -65,9 +62,6 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                    </td>
-                                    <td>
-                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
                                     </td>
                                     <td>
                                         <input class="search" type="text" placeholder="{{ trans('global.search') }}">
@@ -125,9 +119,6 @@
                             <tbody>
                                 @foreach($products as $key => $product)
                                     <tr data-entry-id="{{ $product->id }}">
-                                        <td>
-                                            {{ $product->id ?? '' }}
-                                        </td>
                                         <td>
                                             {{ $product->name ?? '' }}
                                         </td>
