@@ -224,6 +224,90 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 54,
+                'title' => 'master_access',
+            ],
+            [
+                'id'    => 55,
+                'title' => 'city_create',
+            ],
+            [
+                'id'    => 56,
+                'title' => 'city_edit',
+            ],
+            [
+                'id'    => 57,
+                'title' => 'city_show',
+            ],
+            [
+                'id'    => 58,
+                'title' => 'city_delete',
+            ],
+            [
+                'id'    => 59,
+                'title' => 'city_access',
+            ],
+            [
+                'id'    => 60,
+                'title' => 'sales_person_create',
+            ],
+            [
+                'id'    => 61,
+                'title' => 'sales_person_edit',
+            ],
+            [
+                'id'    => 62,
+                'title' => 'sales_person_show',
+            ],
+            [
+                'id'    => 63,
+                'title' => 'sales_person_delete',
+            ],
+            [
+                'id'    => 64,
+                'title' => 'sales_person_access',
+            ],
+            [
+                'id'    => 65,
+                'title' => 'sales_order_create',
+            ],
+            [
+                'id'    => 66,
+                'title' => 'sales_order_edit',
+            ],
+            [
+                'id'    => 67,
+                'title' => 'sales_order_show',
+            ],
+            [
+                'id'    => 68,
+                'title' => 'sales_order_delete',
+            ],
+            [
+                'id'    => 69,
+                'title' => 'sales_order_access',
+            ],
+            [
+                'id'    => 70,
+                'title' => 'sales_order_detail_create',
+            ],
+            [
+                'id'    => 71,
+                'title' => 'sales_order_detail_edit',
+            ],
+            [
+                'id'    => 72,
+                'title' => 'sales_order_detail_show',
+            ],
+            [
+                'id'    => 73,
+                'title' => 'sales_order_detail_delete',
+            ],
+            [
+                'id'    => 74,
+                'title' => 'sales_order_detail_access',
+            ],
+            [
+                'id'    => 75,
                 'title' => 'profile_password_edit',
             ],
         ];
