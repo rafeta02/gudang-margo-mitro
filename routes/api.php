@@ -18,4 +18,13 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
 
     // Product
     Route::apiResource('products', 'ProductApiController');
+
+    // City
+    Route::apiResource('cities', 'CityApiController');
+
+    // Sales Person
+    Route::apiResource('sales-people', 'SalesPersonApiController');
+
+    // Sales Order
+    Route::apiResource('sales-orders', 'SalesOrderApiController');
 });

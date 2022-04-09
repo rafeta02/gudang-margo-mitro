@@ -95,10 +95,49 @@
                         </a>
                     </li>
                 @endcan
+                @can('master_access')
+                    <li class="nav-item has-treeview {{ request()->is("admin/cities*") ? "menu-open" : "" }} {{ request()->is("admin/sales-order-details*") ? "menu-open" : "" }}">
+                        <a class="nav-link nav-dropdown-toggle" href="#">
+                            <i class="fa-fw nav-icon fas fa-cogs">
+
+                            </i>
+                            <p>
+                                {{ trans('cruds.master.title') }}
+                                <i class="right fa fa-fw fa-angle-left nav-icon"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            @can('city_access')
+                                <li class="nav-item">
+                                    <a href="{{ route("admin.cities.index") }}" class="nav-link {{ request()->is("admin/cities") || request()->is("admin/cities/*") ? "active" : "" }}">
+                                        <i class="fa-fw nav-icon fas fa-cogs">
+
+                                        </i>
+                                        <p>
+                                            {{ trans('cruds.city.title') }}
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('sales_order_detail_access')
+                                <li class="nav-item">
+                                    <a href="{{ route("admin.sales-order-details.index") }}" class="nav-link {{ request()->is("admin/sales-order-details") || request()->is("admin/sales-order-details/*") ? "active" : "" }}">
+                                        <i class="fa-fw nav-icon fas fa-cogs">
+
+                                        </i>
+                                        <p>
+                                            {{ trans('cruds.salesOrderDetail.title') }}
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+                        </ul>
+                    </li>
+                @endcan
                 @can('product_management_access')
                     <li class="nav-item has-treeview {{ request()->is("admin/products*") ? "menu-open" : "" }} {{ request()->is("admin/product-categories*") ? "menu-open" : "" }} {{ request()->is("admin/product-brands*") ? "menu-open" : "" }} {{ request()->is("admin/product-units*") ? "menu-open" : "" }} {{ request()->is("admin/product-attributes*") ? "menu-open" : "" }} {{ request()->is("admin/product-variations*") ? "menu-open" : "" }}">
                         <a class="nav-link nav-dropdown-toggle" href="#">
-                            <i class="fa-fw nav-icon fas fa-cogs">
+                            <i class="fa-fw nav-icon fas fa-book">
 
                             </i>
                             <p>
@@ -110,7 +149,7 @@
                             @can('product_access')
                                 <li class="nav-item">
                                     <a href="{{ route("admin.products.index") }}" class="nav-link {{ request()->is("admin/products") || request()->is("admin/products/*") ? "active" : "" }}">
-                                        <i class="fa-fw nav-icon fas fa-cogs">
+                                        <i class="fa-fw nav-icon fas fa-book">
 
                                         </i>
                                         <p>
@@ -180,6 +219,30 @@
                                 </li>
                             @endcan
                         </ul>
+                    </li>
+                @endcan
+                @can('sales_person_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.sales-people.index") }}" class="nav-link {{ request()->is("admin/sales-people") || request()->is("admin/sales-people/*") ? "active" : "" }}">
+                            <i class="fa-fw nav-icon fas fa-users">
+
+                            </i>
+                            <p>
+                                {{ trans('cruds.salesPerson.title') }}
+                            </p>
+                        </a>
+                    </li>
+                @endcan
+                @can('sales_order_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.sales-orders.index") }}" class="nav-link {{ request()->is("admin/sales-orders") || request()->is("admin/sales-orders/*") ? "active" : "" }}">
+                            <i class="fa-fw nav-icon far fa-money-bill-alt">
+
+                            </i>
+                            <p>
+                                {{ trans('cruds.salesOrder.title') }}
+                            </p>
+                        </a>
                     </li>
                 @endcan
                 <li class="nav-item">

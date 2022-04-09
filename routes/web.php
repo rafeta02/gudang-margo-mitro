@@ -57,6 +57,28 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('products/process-csv-import', 'ProductController@processCsvImport')->name('products.processCsvImport');
     Route::resource('products', 'ProductController');
 
+    // City
+    Route::delete('cities/destroy', 'CityController@massDestroy')->name('cities.massDestroy');
+    Route::post('cities/parse-csv-import', 'CityController@parseCsvImport')->name('cities.parseCsvImport');
+    Route::post('cities/process-csv-import', 'CityController@processCsvImport')->name('cities.processCsvImport');
+    Route::resource('cities', 'CityController');
+
+    // Sales Person
+    Route::delete('sales-people/destroy', 'SalesPersonController@massDestroy')->name('sales-people.massDestroy');
+    Route::post('sales-people/parse-csv-import', 'SalesPersonController@parseCsvImport')->name('sales-people.parseCsvImport');
+    Route::post('sales-people/process-csv-import', 'SalesPersonController@processCsvImport')->name('sales-people.processCsvImport');
+    Route::resource('sales-people', 'SalesPersonController');
+
+    // Sales Order
+    Route::delete('sales-orders/destroy', 'SalesOrderController@massDestroy')->name('sales-orders.massDestroy');
+    Route::post('sales-orders/parse-csv-import', 'SalesOrderController@parseCsvImport')->name('sales-orders.parseCsvImport');
+    Route::post('sales-orders/process-csv-import', 'SalesOrderController@processCsvImport')->name('sales-orders.processCsvImport');
+    Route::resource('sales-orders', 'SalesOrderController');
+
+    // Sales Order Detail
+    Route::delete('sales-order-details/destroy', 'SalesOrderDetailController@massDestroy')->name('sales-order-details.massDestroy');
+    Route::resource('sales-order-details', 'SalesOrderDetailController');
+
     Route::get('system-calendar', 'SystemCalendarController@index')->name('systemCalendar');
 });
 Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
@@ -110,6 +132,22 @@ Route::group(['as' => 'frontend.', 'namespace' => 'Frontend', 'middleware' => ['
     // Product
     Route::delete('products/destroy', 'ProductController@massDestroy')->name('products.massDestroy');
     Route::resource('products', 'ProductController');
+
+    // City
+    Route::delete('cities/destroy', 'CityController@massDestroy')->name('cities.massDestroy');
+    Route::resource('cities', 'CityController');
+
+    // Sales Person
+    Route::delete('sales-people/destroy', 'SalesPersonController@massDestroy')->name('sales-people.massDestroy');
+    Route::resource('sales-people', 'SalesPersonController');
+
+    // Sales Order
+    Route::delete('sales-orders/destroy', 'SalesOrderController@massDestroy')->name('sales-orders.massDestroy');
+    Route::resource('sales-orders', 'SalesOrderController');
+
+    // Sales Order Detail
+    Route::delete('sales-order-details/destroy', 'SalesOrderDetailController@massDestroy')->name('sales-order-details.massDestroy');
+    Route::resource('sales-order-details', 'SalesOrderDetailController');
 
     Route::get('frontend/profile', 'ProfileController@index')->name('profile.index');
     Route::post('frontend/profile', 'ProfileController@update')->name('profile.update');
